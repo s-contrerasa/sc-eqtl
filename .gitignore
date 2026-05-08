@@ -18,8 +18,9 @@
 *.bgen
 *.vcf
 
-# SLURM logs
-logs/
+# SLURM logs (keep folder, ignore log files)
+logs/*.out
+logs/*.err
 *.out
 *.err
 slurm-*.out
