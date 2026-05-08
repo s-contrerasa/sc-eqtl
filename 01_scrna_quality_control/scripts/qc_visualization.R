@@ -10,7 +10,7 @@ suppressPackageStartupMessages({
 
 ## Paths -------------------------------------------------------------------
 source("config/paths.env")
-qc_dir  <- Sys.getenv("QC_DIR")
+qc_dir  <- QC_DIR
 fig_dir <- file.path(qc_dir, "figures")
 dir.create(fig_dir, showWarnings = FALSE, recursive = TRUE)
 

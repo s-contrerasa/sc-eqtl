@@ -9,8 +9,8 @@ suppressPackageStartupMessages({
 
 ## Paths -------------------------------------------------------------------
 source("config/paths.env")
-input_file <- file.path(Sys.getenv("QC_DIR"),   "QC.RDS")
-output_dir <- Sys.getenv("NORM_DIR")
+input_file <- file.path(QC_DIR,   "QC.RDS")
+output_dir <- NORM_DIR
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
 ## Load data ---------------------------------------------------------------

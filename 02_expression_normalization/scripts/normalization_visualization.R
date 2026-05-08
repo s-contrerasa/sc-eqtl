@@ -11,7 +11,7 @@ suppressPackageStartupMessages({
 
 ## Paths -------------------------------------------------------------------
 source("config/paths.env")
-norm_dir <- Sys.getenv("NORM_DIR")
+norm_dir <- NORM_DIR
 fig_dir  <- file.path(norm_dir, "figures")
 dir.create(fig_dir, showWarnings = FALSE, recursive = TRUE)
 

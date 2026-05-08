@@ -19,13 +19,14 @@ suppressPackageStartupMessages({
 
 ## Paths -------------------------------------------------------------------
 source("config/paths.env")
-input_file <- file.path(Sys.getenv("NORM_DIR"), "sctransform_norm.RDS")
-output_dir <- Sys.getenv("NORM_DIR")
+input_file <- file.path(NORM_DIR, "sctransform_norm.RDS")
+output_dir <- NORM_DIR
 
 ## Load normalized object --------------------------------------------------
 cat("Loading normalized Seurat object...\n")
 data <- readRDS(input_file)
-cat("Total cells before filtering:", ncol(data), "\n")
+n_cells_before <- ncol(data)
+cat("Total cells before filtering:", n_cells_before, "\n")
 
 ## Step 1 — Filter to 22 canonical immune cell types -----------------------
 # These are the cell types present in the OneK1K dataset that have sufficient
@@ -47,7 +48,7 @@ celltypes_keep <- c(
 
 data <- subset(data, subset = predicted.celltype.l2 %in% celltypes_keep)
 cat("Cells after cell type filtering:", ncol(data),
-    "(", round(100 * ncol(data) / ncol(readRDS(input_file)), 1), "% retained )\n")
+    "(", round(100 * ncol(data) / n_cells_before, 1), "% retained )\n")
 
 ## Step 2 — Annotate 14 eQTL cell types ------------------------------------
 # Fine-grained groupings used for cell-type-specific eQTL mapping.
