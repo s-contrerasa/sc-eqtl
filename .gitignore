@@ -1,0 +1,39 @@
+# Large data files - never commit these
+*.RDS
+*.rds
+*.RData
+*.rda
+*.h5ad
+*.h5seurat
+*.bed
+*.bim
+*.fam
+*.bk
+
+# Output data files
+*.tsv
+*.csv
+*.txt
+*.gz
+*.bgen
+*.vcf
+
+# SLURM logs
+logs/
+*.out
+*.err
+slurm-*.out
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Figures (optional - remove these lines if you want figures on GitHub)
+# figures/
+
+# System files
+.DS_Store
+__pycache__/
+*.pyc
