@@ -1,7 +1,7 @@
 # 00 — Input Data
 
-This pipeline starts from two sets of input files provided by the supervisor.
-Actual file locations are system-specific and not included in this repository.
+Input data are derived from Yazar et al. (2022) and obtained from the GEO repository (accession GSE196830).
+File paths are system-specific and defined locally in `config/paths.env`.
 
 ---
 
